@@ -2,7 +2,7 @@ import os
 import sys
 
 def generate_module(dir : str, module_name: str):
-	module_name = module_name.lower()
+	module_name = module_name.lower().replace(" ", "_")
 	inc_guard_def = module_name.upper() + "_H"
 	
 	#.h file
